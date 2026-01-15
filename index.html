@@ -3,175 +3,484 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CADento Digital Lab</title>
-  <meta name="description" content="CADento Digital Lab — digital solutions, websites, automation, and project delivery." />
+
+  <!-- SEO -->
+  <title>Dental CAD Design Services | CADento</title>
+  <meta name="description" content="Professional dental CAD design services for laboratories and clinics. Crowns, bridges, implants, full-arch cases. Fast turnaround. Remote worldwide service." />
+  <meta name="keywords" content="dental CAD design, dental CAD services, crown and bridge design, implant CAD design, dental CAD outsourcing, remote dental CAD designer" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Social previews (optional but nice) -->
+  <meta property="og:title" content="Dental CAD Design Services | CADento" />
+  <meta property="og:description" content="High-precision digital restorations, fast turnaround, and reliable remote collaboration." />
+  <meta property="og:type" content="website" />
 
   <style>
-    :root { --bg:#0b0d12; --card:#121625; --text:#e9ecf3; --muted:#aab3c5; --line:#26304a; --accent:#7aa2ff; }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 20% 0%, #141a2e 0%, var(--bg) 50%) fixed;
-      color: var(--text);
-      line-height: 1.5;
+    :root{
+      --bg:#0b0d12;
+      --card:#121625;
+      --text:#e9ecf3;
+      --muted:#aab3c5;
+      --line:#26304a;
+      --accent:#7aa2ff;
+      --accent2:#ff7ad9;
+      --ok:#57e3a0;
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 18px;
     }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 40px 18px; }
-    header { display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
-    .brand { display:flex; gap:14px; align-items:center; }
-    .logo {
-      width: 44px; height: 44px; border-radius: 12px;
-      background: linear-gradient(135deg, #7aa2ff 0%, #9b7aff 50%, #ff7ad9 100%);
-      box-shadow: 0 10px 30px rgba(122,162,255,.22);
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1100px 600px at 20% 0%, #151c33 0%, var(--bg) 55%) fixed;
+      line-height:1.55;
     }
-    .title { display:flex; flex-direction:column; gap:2px; }
-    .title strong { font-size: 18px; letter-spacing: .2px; }
-    .title span { color: var(--muted); font-size: 13px; }
-    .cta { display:flex; gap:10px; align-items:center; }
-    .btn {
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 10px 14px; border-radius: 12px;
-      border: 1px solid var(--line); background: rgba(18,22,37,.85);
-      color: var(--text);
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:34px 18px 44px}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+      position:sticky;top:0;z-index:10;
+      background: rgba(11,13,18,.75);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(38,48,74,.6);
+      padding:14px 18px;
+      margin: -34px -18px 0;
     }
-    .btn:hover { border-color: rgba(122,162,255,.55); text-decoration:none; }
-    .btn.primary { background: rgba(122,162,255,.12); border-color: rgba(122,162,255,.55); }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:40px;height:40px;border-radius:14px;
+      background: linear-gradient(135deg, var(--accent) 0%, #9b7aff 45%, var(--accent2) 100%);
+      box-shadow: 0 12px 35px rgba(122,162,255,.22);
+      flex:0 0 auto;
+    }
+    .brand .t{display:flex;flex-direction:column;gap:2px}
+    .brand strong{font-size:16px;letter-spacing:.2px}
+    .brand span{font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:12px;flex-wrap:wrap}
+    .navlink{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(38,48,74,.9);
+      color:var(--muted);
+      background: rgba(18,22,37,.35);
+      font-size:13px;
+    }
+    .navlink:hover{border-color: rgba(122,162,255,.55); color: var(--text); text-decoration:none}
 
-    .hero { margin-top: 34px; display:grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
-    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
-    .card {
+    .hero{
+      padding:34px 0 10px;
+      display:grid;grid-template-columns: 1.1fr .9fr;gap:18px;
+    }
+    @media (max-width: 920px){ .hero{grid-template-columns:1fr} header{position:relative} }
+    .card{
       background: rgba(18,22,37,.72);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 18px;
-      box-shadow: 0 14px 50px rgba(0,0,0,.28);
-      backdrop-filter: blur(8px);
+      border:1px solid rgba(38,48,74,.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+      backdrop-filter: blur(10px);
     }
-    h1 { margin: 6px 0 10px; font-size: 34px; line-height: 1.15; }
-    p.lead { margin: 0; color: var(--muted); font-size: 15px; }
-    .badges { display:flex; flex-wrap:wrap; gap:8px; margin-top: 14px; }
-    .badge {
-      padding: 8px 10px; border-radius: 999px;
-      border: 1px solid var(--line);
+    h1{margin:6px 0 10px;font-size:38px;line-height:1.12}
+    @media (max-width:520px){ h1{font-size:30px} }
+    p.lead{margin:0;color:var(--muted);font-size:15px}
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 14px;border-radius: 14px;
+      border:1px solid rgba(38,48,74,.95);
       background: rgba(11,13,18,.35);
-      color: var(--muted);
-      font-size: 13px;
-    }
-    h2 { margin: 0 0 10px; font-size: 16px; }
-    ul { margin: 10px 0 0 18px; color: var(--muted); }
-    .grid { margin-top: 18px; display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
-
-    label { display:block; font-size: 13px; color: var(--muted); margin: 12px 0 6px; }
-    input, textarea {
-      width:100%; padding: 11px 12px; border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(11,13,18,.45);
       color: var(--text);
-      outline: none;
+      font-weight:600;
     }
-    input:focus, textarea:focus { border-color: rgba(122,162,255,.65); }
-    textarea { min-height: 120px; resize: vertical; }
-    .row { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
-    .small { font-size: 12px; color: var(--muted); margin-top: 10px; }
-    footer { margin-top: 26px; color: var(--muted); font-size: 12px; text-align:center; }
-    .contact-list { margin: 8px 0 0; padding: 0; list-style: none; }
-    .contact-list li { margin: 8px 0; color: var(--muted); }
+    .btn:hover{border-color: rgba(122,162,255,.6); text-decoration:none}
+    .btn.primary{
+      background: rgba(122,162,255,.14);
+      border-color: rgba(122,162,255,.65);
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(38,48,74,.95);
+      background: rgba(11,13,18,.25);
+      color: var(--muted);
+      font-size:13px;
+    }
+    .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+
+    section{margin-top:18px}
+    .sectionhead{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      margin: 26px 0 12px;
+    }
+    .sectionhead h2{margin:0;font-size:18px}
+    .sectionhead p{margin:0;color:var(--muted);font-size:13px}
+
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width: 920px){ .grid2{grid-template-columns:1fr} }
+
+    ul{margin:10px 0 0 18px;color:var(--muted)}
+    li{margin:6px 0}
+    .steps{counter-reset: step}
+    .steps li{
+      list-style:none;margin:10px 0;padding-left:0
+    }
+    .steps li:before{
+      counter-increment: step;
+      content: counter(step);
+      display:inline-flex;align-items:center;justify-content:center;
+      width:22px;height:22px;margin-right:10px;
+      border-radius: 999px;
+      border:1px solid rgba(122,162,255,.6);
+      background: rgba(122,162,255,.12);
+      color: var(--text);
+      font-size:12px;font-weight:700;
+      vertical-align:middle;
+    }
+
+    .portfolio{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    @media (max-width: 920px){ .portfolio{grid-template-columns: repeat(2,1fr)} }
+    @media (max-width: 520px){ .portfolio{grid-template-columns:1fr} }
+    .shot{
+      border:1px solid rgba(38,48,74,.95);
+      background: rgba(11,13,18,.25);
+      border-radius: 16px;
+      overflow:hidden;
+    }
+    .shot .img{
+      aspect-ratio: 4/3;
+      display:flex;align-items:center;justify-content:center;
+      color: rgba(170,179,197,.75);
+      font-size:13px;
+      background:
+        radial-gradient(600px 220px at 30% 0%, rgba(122,162,255,.22) 0%, rgba(11,13,18,.15) 55%),
+        rgba(11,13,18,.25);
+    }
+    .shot figcaption{
+      padding:10px 10px 12px;
+      color: var(--muted);
+      font-size:12px;
+      border-top:1px solid rgba(38,48,74,.6);
+    }
+
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    @media (max-width: 520px){ .checks{grid-template-columns:1fr} }
+    .check{
+      display:flex;gap:10px;align-items:flex-start;
+      padding:10px 12px;border-radius:14px;
+      border:1px solid rgba(38,48,74,.95);
+      background: rgba(11,13,18,.22);
+      color: var(--muted);
+    }
+    .check b{color: var(--text)}
+    .tick{
+      width:18px;height:18px;border-radius:6px;
+      border:1px solid rgba(87,227,160,.65);
+      background: rgba(87,227,160,.12);
+      box-shadow: 0 10px 30px rgba(87,227,160,.10);
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+
+    label{display:block;color:var(--muted);font-size:13px;margin:12px 0 6px}
+    input, textarea{
+      width:100%;
+      padding:11px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(38,48,74,.95);
+      background: rgba(11,13,18,.35);
+      color: var(--text);
+      outline:none;
+    }
+    input:focus, textarea:focus{border-color: rgba(122,162,255,.7)}
+    textarea{min-height:120px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width: 560px){ .row{grid-template-columns:1fr} }
+    .small{font-size:12px;color:var(--muted);margin-top:10px}
+    footer{
+      margin-top: 26px;
+      border-top:1px solid rgba(38,48,74,.6);
+      padding-top:16px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
   </style>
 </head>
 
 <body>
   <div class="wrap">
+
     <header>
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
-        <div class="title">
-          <strong>CADento Digital Lab</strong>
-          <span>Digital solutions • Automation • Delivery</span>
+        <div class="t">
+          <strong>CADento</strong>
+          <span>Dental CAD Design Services</span>
         </div>
       </div>
-      <div class="cta">
-        <a class="btn" href="#contact">Contact</a>
-        <a class="btn primary" href="mailto:[cadento.digital.lab@gmail.com]">Email us</a>
-      </div>
+
+      <nav>
+        <a class="navlink" href="#services">Services</a>
+        <a class="navlink" href="#workflow">How it works</a>
+        <a class="navlink" href="#about">About</a>
+        <a class="navlink" href="#portfolio">Sample Work</a>
+        <a class="navlink" href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" id="top">
       <div class="card">
-        <h1>We build practical digital solutions that help your business move faster.</h1>
-        <p class="lead">
-          CADento Digital Lab delivers clean websites, internal tools, automation, and project execution —
-          focused on clarity, speed, and reliability.
-        </p>
+        <h1>Dental CAD Design Services for Laboratories &amp; Clinics</h1>
+        <p class="lead">High-precision digital restorations, fast turnaround, and reliable remote collaboration.</p>
 
-        <div class="badges">
-          <span class="badge">Websites</span>
-          <span class="badge">Automation</span>
-          <span class="badge">Dashboards</span>
-          <span class="badge">Integrations</span>
-          <span class="badge">Maintenance</span>
+        <div class="pills">
+          <span class="pill">Crown &amp; Bridge</span>
+          <span class="pill">Implant Restorations</span>
+          <span class="pill">Full-Arch</span>
+          <span class="pill">Remote Worldwide</span>
         </div>
 
-        <h2 style="margin-top:16px;">What we do</h2>
-        <ul>
-          <li>Company websites (fast, mobile-friendly, SEO basics)</li>
-          <li>Automation & workflows (Google Sheets / Apps Script, integrations)</li>
-          <li>Simple web apps for operations (forms, portals, dashboards)</li>
-          <li>Ongoing support & improvements</li>
-        </ul>
-      </div>
-
-      <div class="card" id="contact">
-        <h2>Contact</h2>
-        <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:[cadento.digital.lab@gmail.com]">[cadento.digital.lab@gmail.com]</a></li>
-          <li><strong>Phone:</strong> <a href="tel:[+306937333460]">[+306937333460]</a></li>
-          <li><strong>Location:</strong> London, United Kingdom</li>
-          <li><strong>Address:</strong> 71–75 Shelton Street, Covent Garden, WC2H 9JQ</li>
-        </ul>
-
-        <hr style="border:none;border-top:1px solid var(--line);margin:14px 0;">
-
-        <h2>Send a message</h2>
-
-        <!-- 1) Create a Formspree form, then replace the action URL below -->
-        <form action="https://formspree.io/f/mqeeawyk" method="POST">
-          <div class="row">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" placeholder="Your name" required />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" name="email" placeholder="you@email.com" required />
-            </div>
-          </div>
-
-          <label for="subject">Subject</label>
-          <input id="subject" name="subject" placeholder="How can we help?" />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us what you need..." required></textarea>
-
-          <div style="margin-top:12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-            <button class="btn primary" type="submit">Send</button>
-            <span class="small">We usually reply within 24 hours.</span>
-          </div>
-        </form>
+        <div class="btnrow">
+          <a class="btn primary" href="#contact">Request a Test Case</a>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
 
         <p class="small">
-          Note: This basic form sends messages to your email. Later, we can add a client portal for file uploads and job requirements.
+          Compatible with all major CAD software and milling systems.
+        </p>
+      </div>
+
+      <!-- QUICK CONTACT CARD -->
+      <div class="card">
+        <div class="sectionhead" style="margin:0 0 10px;">
+          <h2>Start a Test Case</h2>
+          <p>Fast response • Clear instructions</p>
+        </div>
+
+        <p class="lead" style="margin-bottom:10px;">
+          Send your STL files and requirements, and we’ll reply with timelines and next steps.
+        </p>
+
+        <div class="checks">
+          <div class="check"><span class="tick" aria-hidden="true"></span><div><b>Fast turnaround</b><br/>Reliable delivery timelines</div></div>
+          <div class="check"><span class="tick" aria-hidden="true"></span><div><b>Quality control</b><br/>Occlusion, fit, morphology</div></div>
+          <div class="check"><span class="tick" aria-hidden="true"></span><div><b>Clear communication</b><br/>Simple revisions process</div></div>
+          <div class="check"><span class="tick" aria-hidden="true"></span><div><b>Remote worldwide</b><br/>Labs &amp; clinics globally</div></div>
+        </div>
+
+        <div class="btnrow" style="margin-top:14px;">
+          <a class="btn primary" href="#contact">Request a Test Case</a>
+          <a class="btn" href="mailto:info@cadento.com">Email: info@cadento.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="sectionhead">
+        <h2>Our Services</h2>
+        <p>Professional dental CAD design for a wide range of cases</p>
+      </div>
+
+      <div class="card">
+        <ul>
+          <li>Crown &amp; Bridge design (Zirconia, PMMA, Metal, E.max)</li>
+          <li>Implant restorations (custom abutments, screw-retained crowns, bars)</li>
+          <li>Veneers, Inlays &amp; Onlays</li>
+          <li>Temporary restorations</li>
+          <li>Full-arch and complex cases</li>
+          <li>STL file optimization for milling and 3D printing</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="workflow">
+      <div class="sectionhead">
+        <h2>Simple &amp; Efficient Workflow</h2>
+        <p>From STL upload to production-ready delivery</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <ol class="steps" style="margin:0;padding:0;">
+            <li>You send your STL files</li>
+            <li>We design according to your instructions</li>
+            <li>Review &amp; adjustments if needed</li>
+            <li>Final delivery ready for production</li>
+          </ol>
+          <p class="small" style="margin-top:12px;">
+            Compatible with all major CAD software and milling systems.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 style="margin:0 0 10px;">What we need from you</h2>
+          <ul style="margin-top:0;">
+            <li>STL files (upper/lower, scan bodies if implant case)</li>
+            <li>Case type (crown/bridge/implant/full-arch)</li>
+            <li>Material preference &amp; margin requirements</li>
+            <li>Notes on occlusion/contact points</li>
+            <li>Any reference photos (optional)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="sectionhead">
+        <h2>About CADento</h2>
+        <p>Remote collaboration • Worldwide service</p>
+      </div>
+
+      <div class="card">
+        <p class="lead">
+          CADento is a specialized dental CAD design service founded by <b>Dimitrios Voutsas</b>, focused on delivering accurate,
+          functional, and aesthetic digital restorations for dental laboratories and clinics worldwide.
+        </p>
+        <p class="lead" style="margin-top:10px;">
+          With strong attention to occlusion, morphology, and fit, we aim to become a reliable long-term digital partner for your laboratory or clinic.
+        </p>
+        <p class="small" style="margin-top:12px;">
+          Location: Greece — working remotely worldwide.
         </p>
       </div>
     </section>
 
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+      <div class="sectionhead">
+        <h2>Sample Work</h2>
+        <p>Add 6–12 images (crowns, implants, full-arch, bridges, STL screenshots)</p>
+      </div>
+
+      <div class="portfolio">
+        <!-- Replace each placeholder with a real image later:
+             1) Upload files into GitHub repo, e.g. /portfolio/zirconia-crown-01.jpg
+             2) Replace the <div class="img">... with <img src="..." ...> -->
+        <figure class="shot">
+          <div class="img">Portfolio Image 1</div>
+          <figcaption>Example of zirconia crown design – CADento</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="img">Portfolio Image 2</div>
+          <figcaption>Implant screw-retained crown – CADento</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="img">Portfolio Image 3</div>
+          <figcaption>Full-arch design – CADento</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="img">Portfolio Image 4</div>
+          <figcaption>Bridge case – CADento</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="img">Portfolio Image 5</div>
+          <figcaption>STL optimization / milling prep – CADento</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="img">Portfolio Image 6</div>
+          <figcaption>Occlusion &amp; contacts check – CADento</figcaption>
+        </figure>
+      </div>
+
+      <p class="small" style="margin-top:10px;">
+        If you want, we can also add a “Download portfolio PDF” later.
+      </p>
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section id="why">
+      <div class="sectionhead">
+        <h2>Why Work With Us</h2>
+        <p>Quality, consistency, and communication</p>
+      </div>
+
+      <div class="card">
+        <div class="checks">
+          <div class="check"><span class="tick" aria-hidden="true"></span><div><b>Fast turnaround times</b><br/>Reliable timelines per case type</div></div>
+          <div class="check"><span class="tick" aria-hidden="true"></span><div><b>Consistent quality control</b><br/>Fit, occlusion, morphology</div></div>
+          <div class="check"><span class="tick" aria-hidden="true"></span><div><b>Clear communication</b><br/>Simple instructions &amp; revisions</div></div>
+          <div class="check"><span class="tick" aria-hidden="true"></span><div><b>Complex case experience</b><br/>Full-arch &amp; implant restorations</div></div>
+          <div class="check"><span class="tick" aria-hidden="true"></span><div><b>Flexible integration</b><br/>Works with your workflow/tools</div></div>
+          <div class="check"><span class="tick" aria-hidden="true"></span><div><b>Competitive pricing</b><br/>Clear quotes for labs &amp; clinics</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="sectionhead">
+        <h2>Contact CADento</h2>
+        <p>Let’s discuss your workflow or start with a test case</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h2 style="margin:0 0 10px;">Contact Details</h2>
+          <p class="lead" style="margin:0 0 10px;">
+            Email: <a href="mailto:cadento.digital.lab@gmail.com">cadento.digital.lab@gmail.com</a><br/>
+            Phone / WhatsApp: <a href="tel:+30694 7429300">+44 7864 096186</a><br/>
+            Location: Greece (Remote worldwide)
+          </p>
+
+          <p class="small">
+            Tip: If you want the email to match your domain, we can set up <b>info@cadentodigitallab.com</b> (forwarding or mailbox) later.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 style="margin:0 0 10px;">Send a Message</h2>
+
+          <!-- Replace with your Formspree endpoint -->
+          <form action="https://formspree.io/f/mqeeawyk" method="POST">
+            <div class="row">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="you@email.com" required />
+              </div>
+            </div>
+
+            <label for="subject">Case / Subject</label>
+            <input id="subject" name="subject" placeholder="Crown / Implant / Full-arch / Other" />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us your requirements and preferred turnaround..." required></textarea>
+
+            <div class="btnrow" style="margin-top:12px;">
+              <button class="btn primary" type="submit">Send</button>
+              <a class="btn" href="#top">Back to top</a>
+            </div>
+
+            <p class="small">
+              We usually reply within 24 hours (business days).
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-      © <span id="y"></span> CADento Digital Lab. All rights reserved.
+      CADento – Dental CAD Design Services<br/>
+      © <span id="y"></span> CADento. All rights reserved.
       <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
     </footer>
+
   </div>
 </body>
 </html>
