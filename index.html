@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CADento Digital Lab</title>
+  <meta name="description" content="CADento Digital Lab — digital solutions, websites, automation, and project delivery." />
+
+  <style>
+    :root { --bg:#0b0d12; --card:#121625; --text:#e9ecf3; --muted:#aab3c5; --line:#26304a; --accent:#7aa2ff; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% 0%, #141a2e 0%, var(--bg) 50%) fixed;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 40px 18px; }
+    header { display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+    .brand { display:flex; gap:14px; align-items:center; }
+    .logo {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, #7aa2ff 0%, #9b7aff 50%, #ff7ad9 100%);
+      box-shadow: 0 10px 30px rgba(122,162,255,.22);
+    }
+    .title { display:flex; flex-direction:column; gap:2px; }
+    .title strong { font-size: 18px; letter-spacing: .2px; }
+    .title span { color: var(--muted); font-size: 13px; }
+    .cta { display:flex; gap:10px; align-items:center; }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 10px 14px; border-radius: 12px;
+      border: 1px solid var(--line); background: rgba(18,22,37,.85);
+      color: var(--text);
+    }
+    .btn:hover { border-color: rgba(122,162,255,.55); text-decoration:none; }
+    .btn.primary { background: rgba(122,162,255,.12); border-color: rgba(122,162,255,.55); }
+
+    .hero { margin-top: 34px; display:grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+    .card {
+      background: rgba(18,22,37,.72);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 14px 50px rgba(0,0,0,.28);
+      backdrop-filter: blur(8px);
+    }
+    h1 { margin: 6px 0 10px; font-size: 34px; line-height: 1.15; }
+    p.lead { margin: 0; color: var(--muted); font-size: 15px; }
+    .badges { display:flex; flex-wrap:wrap; gap:8px; margin-top: 14px; }
+    .badge {
+      padding: 8px 10px; border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(11,13,18,.35);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    h2 { margin: 0 0 10px; font-size: 16px; }
+    ul { margin: 10px 0 0 18px; color: var(--muted); }
+    .grid { margin-top: 18px; display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+
+    label { display:block; font-size: 13px; color: var(--muted); margin: 12px 0 6px; }
+    input, textarea {
+      width:100%; padding: 11px 12px; border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(11,13,18,.45);
+      color: var(--text);
+      outline: none;
+    }
+    input:focus, textarea:focus { border-color: rgba(122,162,255,.65); }
+    textarea { min-height: 120px; resize: vertical; }
+    .row { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+    .small { font-size: 12px; color: var(--muted); margin-top: 10px; }
+    footer { margin-top: 26px; color: var(--muted); font-size: 12px; text-align:center; }
+    .contact-list { margin: 8px 0 0; padding: 0; list-style: none; }
+    .contact-list li { margin: 8px 0; color: var(--muted); }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">
+          <strong>CADento Digital Lab</strong>
+          <span>Digital solutions • Automation • Delivery</span>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn primary" href="mailto:[cadento.digital.lab@gmail.com]">Email us</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>We build practical digital solutions that help your business move faster.</h1>
+        <p class="lead">
+          CADento Digital Lab delivers clean websites, internal tools, automation, and project execution —
+          focused on clarity, speed, and reliability.
+        </p>
+
+        <div class="badges">
+          <span class="badge">Websites</span>
+          <span class="badge">Automation</span>
+          <span class="badge">Dashboards</span>
+          <span class="badge">Integrations</span>
+          <span class="badge">Maintenance</span>
+        </div>
+
+        <h2 style="margin-top:16px;">What we do</h2>
+        <ul>
+          <li>Company websites (fast, mobile-friendly, SEO basics)</li>
+          <li>Automation & workflows (Google Sheets / Apps Script, integrations)</li>
+          <li>Simple web apps for operations (forms, portals, dashboards)</li>
+          <li>Ongoing support & improvements</li>
+        </ul>
+      </div>
+
+      <div class="card" id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:[cadento.digital.lab@gmail.com]">[cadento.digital.lab@gmail.com]</a></li>
+          <li><strong>Phone:</strong> <a href="tel:[PHONE]">[PHONE]</a></li>
+          <li><strong>Location:</strong> London, United Kingdom</li>
+          <li><strong>Address:</strong> 71–75 Shelton Street, Covent Garden, WC2H 9JQ</li>
+        </ul>
+
+        <hr style="border:none;border-top:1px solid var(--line);margin:14px 0;">
+
+        <h2>Send a message</h2>
+
+        <!-- 1) Create a Formspree form, then replace the action URL below -->
+        <form action="https://formspree.io/f/mqeeawyk" method="POST">
+          <div class="row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="you@email.com" required />
+            </div>
+          </div>
+
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" placeholder="How can we help?" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what you need..." required></textarea>
+
+          <div style="margin-top:12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+            <button class="btn primary" type="submit">Send</button>
+            <span class="small">We usually reply within 24 hours.</span>
+          </div>
+        </form>
+
+        <p class="small">
+          Note: This basic form sends messages to your email. Later, we can add a client portal for file uploads and job requirements.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> CADento Digital Lab. All rights reserved.
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
+  </div>
+</body>
+</html>
