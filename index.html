@@ -79,9 +79,21 @@
     .navlink:hover{border-color: rgba(122,162,255,.55); color: var(--text); text-decoration:none}
 
     .hero{
-      padding:34px 0 10px;
-      display:grid;grid-template-columns: 1.1fr .9fr;gap:18px;
-    }
+  position: relative;
+  padding:34px 0 10px;
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:18px;
+
+  /* HERO background image */
+  background:
+    linear-gradient(rgba(11,13,18,0.72), rgba(11,13,18,0.72)),
+    url("backround.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 22px;
+}
+
     @media (max-width: 920px){ .hero{grid-template-columns:1fr} header{position:relative} }
     .card{
       background: rgba(18,22,37,.72);
