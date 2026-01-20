@@ -187,6 +187,24 @@
       border-radius: 16px;
       overflow:hidden;
     }
+    .port-img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  transition: transform .18s ease, opacity .18s ease;
+  }
+
+.shot a{
+  display:block;
+  }
+
+.shot:hover .port-img{
+  transform: scale(1.03);
+  opacity: 0.95;
+  }
+
     .shot .img{
       aspect-ratio: 4/3;
       display:flex;align-items:center;justify-content:center;
@@ -402,29 +420,41 @@
              1) Upload files into GitHub repo, e.g. /portfolio/zirconia-crown-01.jpg
              2) Replace the <div class="img">... with <img src="..." ...> -->
         <figure class="shot">
-          <div class="img">Portfolio Image 1</div>
-          <figcaption>Example of zirconia crown design – CADento</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="img">Portfolio Image 2</div>
-          <figcaption>Implant screw-retained crown – CADento</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="img">Portfolio Image 3</div>
-          <figcaption>Full-arch design – CADento</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="img">Portfolio Image 4</div>
-          <figcaption>Bridge case – CADento</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="img">Portfolio Image 5</div>
-          <figcaption>STL optimization / milling prep – CADento</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="img">Portfolio Image 6</div>
-          <figcaption>Occlusion &amp; contacts check – CADento</figcaption>
-        </figure>
+  <a href="portfolio/Screenshot130542.png" target="_blank" rel="noopener">
+    <img class="port-img" src="portfolio/Screenshot130542.png" alt="CADento sample work 1">
+  </a>
+</figure>
+
+<figure class="shot">
+  <a href="portfolio/Screenshot142738.png" target="_blank" rel="noopener">
+    <img class="port-img" src="portfolio/Screenshot142738.png" alt="CADento sample work 2">
+  </a>
+</figure>
+
+<figure class="shot">
+  <a href="portfolio/Screenshot152926.png" target="_blank" rel="noopener">
+    <img class="port-img" src="portfolio/Screenshot152926.png" alt="CADento sample work 3">
+  </a>
+</figure>
+
+<figure class="shot">
+  <a href="portfolio/Screenshot164750.png" target="_blank" rel="noopener">
+    <img class="port-img" src="portfolio/Screenshot164750.png" alt="CADento sample work 4">
+  </a>
+</figure>
+
+<figure class="shot">
+  <a href="portfolio/Screenshot203202.png" target="_blank" rel="noopener">
+    <img class="port-img" src="portfolio/Screenshot203202.png" alt="CADento sample work 5">
+  </a>
+</figure>
+
+<figure class="shot">
+  <a href="portfolio/Screenshot235130.png" target="_blank" rel="noopener">
+    <img class="port-img" src="portfolio/Screenshot235130.png" alt="CADento sample work 6">
+  </a>
+</figure>
+
       </div>
 
       <p class="small" style="margin-top:10px;">
